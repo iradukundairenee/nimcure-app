@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- City Background -->
+  <rect x="0" y="0" width="800" height="300" fill="#2563EB" />
+  <rect x="0" y="300" width="800" height="300" fill="#1E40AF" />
+  
+  <!-- Buildings -->
+  <rect x="100" y="50" width="100" height="250" fill="#3B82F6" />
+  <rect x="250" y="100" width="80" height="200" fill="#3B82F6" />
+  <rect x="380" y="70" width="120" height="230" fill="#3B82F6" />
+  <rect x="550" y="120" width="90" height="180" fill="#3B82F6" />
+  
+  <!-- Clouds -->
+  <circle cx="150" cy="80" r="20" fill="#93C5FD" />
+  <circle cx="400" cy="60" r="25" fill="#93C5FD" />
+  <circle cx="650" cy="100" r="15" fill="#93C5FD" />
+  
+  <!-- Delivery Person -->
+  <circle cx="400" cy="400" r="30" fill="#FB923C" /> <!-- Head -->
+  <rect x="385" y="430" width="30" height="50" fill="#FB923C" /> <!-- Body -->
+  
+  <!-- Scooter -->
+  <circle cx="400" cy="500" r="25" fill="#60A5FA" /> <!-- Wheel -->
+  <rect x="375" y="480" width="80" height="20" fill="#2563EB" /> <!-- Body -->
+  <path d="M375 480 L425 460 L455 480" fill="#2563EB" /> <!-- Front -->
+  
+  <!-- Package -->
+  <rect x="440" y="450" width="40" height="40" fill="#FCD34D" />
+</svg>
