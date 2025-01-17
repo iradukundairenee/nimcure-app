@@ -1,8 +1,8 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'NIMCURE Delivery',
-  description: 'Medical Delivery Management System',
+  title: "NIMCURE Delivery",
+  description: "Medical Delivery Management System",
 };
 
 export default function RootLayout({
@@ -13,8 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        
-        <main>{children}</main>
+        <main >{children}</main>
       </body>
     </html>
   );

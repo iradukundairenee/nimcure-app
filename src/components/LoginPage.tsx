@@ -33,7 +33,7 @@ const LoginPage = () => {
     console.log("Form submitted:", formData);
 
     // Navigate to /patient
-    router.push("/patient");
+    router.push("/patients");
   };
 
   return (

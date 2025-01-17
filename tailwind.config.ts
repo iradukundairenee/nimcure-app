@@ -8,12 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gilroy: ['Gilroy', 'sans-serif'],
+      },
+      fontSize: {
+        '24px': '24px',
+      },
+      lineHeight: {
+        '26.4': '26.4px',
+      },
       colors: {
-        primary: {
-          DEFAULT: '#1A56DB', // Main blue color from the design
-          dark: '#1E429F',
-          light: '#60A5FA',
-        },
+        'gray-custom': 'rgba(38, 38, 38, 0.8)', 
+        'custom-green': '#01A85A',
+        'custom-green-opacity': '#01A85A33',
       },
     },
   },
