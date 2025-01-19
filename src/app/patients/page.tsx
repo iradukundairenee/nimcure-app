@@ -32,20 +32,27 @@ export default function PatientsPage() {
               <input
                 type="search"
                 placeholder="Search by patient name, id"
-                className="border rounded p-2 text-[14px] leading-[16.8px] font-gilroy font-normal text-[#262626] text-opacity-50 w-64 pl-8"
+                className="w-[224px] h-[32px] border border-[#E5E5E5] rounded-[4px] pl-7 pr-2 py-1.5 text-[12px] placeholder-[#262626]/30 focus:outline-none focus:ring-1 focus:ring-[#E5E5E5]"
               />
               <svg
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[#262626] text-opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 text-[#262626]/30"
+                viewBox="0 0 20 20"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-4.35-4.35M19 10a9 9 0 111-1 9 9 0 011 1z"
+                  d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M17.5 17.5L14.1667 14.1667"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -164,16 +171,15 @@ export default function PatientsPage() {
                     <td className="p-4 text-sm">
                       <span
                         className={`bg-custom-green-opacity opacity-70 text-custom-green   rounded-md px-4 py-3 text-xs font-gilroy font-bold leading-[14px]  decoration-skip-ink w-[75px] h-[36px]`}
-                 
                       >
                         {patient.status}
                       </span>
                     </td>
                     <td className="p-4 text-sm">
-                    <Link href={`/patientsInformations`}>
-                      <button className="text-blue-500 border border-blue-300 hover:border-blue-500 rounded-md px-2 py-1">
-                        View
-                      </button>
+                      <Link href={`/patientsInformations`}>
+                        <button className="text-blue-500 border border-blue-300 hover:border-blue-500 rounded-md px-2 py-1">
+                          View
+                        </button>
                       </Link>
                     </td>
                   </tr>
