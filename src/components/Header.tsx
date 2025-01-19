@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 interface HeaderProps {
   title: string;
@@ -20,6 +21,9 @@ const Header: React.FC<HeaderProps> = ({
   nextDeliveryDate,
   daysRemaining,
 }) => {
+  const pathname = usePathname();
+  const isPatientRoute = pathname === '/patients';
+
   return (
     <div className="py-4 px-8 flex flex-row items-center justify-between gap-4 border-b border-gray-200">
       {/* Breadcrumb */}
@@ -34,35 +38,33 @@ const Header: React.FC<HeaderProps> = ({
       )}
 
       {/* Main Header */}
-      <div className="flex justify-between items-center ">
+      <div className={`flex justify-between items-center  ${isPatientRoute ? 'w-full' : ''}`}>
         <div className="flex items-center gap-[120px]">
           <h1 className="font-gilroy font-normal text-[24px] leading-[26.4px] text-gray-900 m-0">
             {title}
           </h1>
 
           {/* Delivery Info */}
-
           {nextDeliveryDate && (
             <p className="text-gray-600 text-sm flex flex-col">
+              <div>Patient next delivery date is </div>
               <div>
-              Patient next delivery date is{" "}
+                <span className="font-medium">{nextDeliveryDate}</span>
+                {daysRemaining && `, in ${daysRemaining} days`}
               </div>
-            <div>
-            <span className="font-medium">{nextDeliveryDate}</span>
-              {daysRemaining && `, in ${daysRemaining} days`}
-            </div>
             </p>
           )}
         </div>
-
-        {buttonLabel && (
-          <button
-            className="bg-[#4285F4] text-white px-6 py-2 rounded-[4px] hover:bg-blue-600 text-sm font-medium pr-4"
-            onClick={onButtonClick}
-          >
-            {buttonLabel}
-          </button>
-        )}
+        <div>
+          {buttonLabel && (
+            <button
+              className="bg-[#4285F4] text-white px-6 py-2 rounded-[4px] hover:bg-blue-600 text-sm font-medium pr-4"
+              onClick={onButtonClick}
+            >
+              {buttonLabel}
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
